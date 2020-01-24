@@ -1,0 +1,64 @@
+{
+    "movies" : [
+        {
+            "title" : "Inception",
+            "genre" : ["Action", "Adventure", "Sci-Fi"],
+            "rating" : 9,
+            "image" : "inception"
+        },
+        {
+            "title" : "The Shawshank Redemption",
+            "genre" : ["Drama"],
+            "rating" : 9,
+            "image" : "shawshank"
+        },
+        {
+            "title" : "The Dark Knight ",
+            "genre" : ["Action","Drama","Crime"],
+            "rating" : 8,
+            "image" : "darkknight"
+        },
+        {
+            "title" : "Interstellar",
+            "genre" : ["Drama", "Adventure", "Sci-Fi"],
+            "rating" : 8,
+            "image" : "interstellar"
+        },
+        {
+            "title" : "Saving Private Ryan",
+            "genre" : ["Drama", "War"],
+            "rating" : 9,
+            "image" : "savingprivateryan"
+        },
+        {
+            "title" : "The Prestige",
+            "genre" : ["Drama", "Mystery", "Sci-Fi"],
+            "rating" : 8,
+            "image" : "prestige"
+        },
+        {
+            "title" : "Gladiator",
+            "genre" : ["Drama","Action"],
+            "rating" : 8,
+            "image" : "gladiator"
+        },
+        {
+            "title" : "The Dark Knight Rises",
+            "genre" : ["Action","Drama","Crime"],
+            "rating" : 8,
+            "image" : "darkknightrises"
+        },
+        {
+            "title" : "Momento",
+            "genre" : ["Mystery","Thriller"],
+            "rating" : 7,
+            "image" : "momento"
+        },
+        {
+            "title" : "The Pianist",
+            "genre" : ["Biography","Drama", "War"],
+            "rating" : 7,
+            "image" : "pianist"
+        }
+    ]
+}
