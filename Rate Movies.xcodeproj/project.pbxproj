@@ -111,6 +111,15 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		7A0C5C4623DB333D00D762BA /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4CCD5F0C23DAED8800C02451 /* RatePopupController.swift */,
+				7A5AB95523DA12DF00A3BA22 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		7A5AB94723DA12DF00A3BA22 = {
 			isa = PBXGroup;
 			children = (
@@ -134,17 +143,16 @@
 		7A5AB95223DA12DF00A3BA22 /* Rate Movies */ = {
 			isa = PBXGroup;
 			children = (
+				7A0C5C4623DB333D00D762BA /* ViewControllers */,
 				4CCD5F0923DAE6F800C02451 /* Models */,
 				4CCD5F0623DAA9DF00C02451 /* TableCells */,
 				4CCD5F0323DAA6C800C02451 /* Utils */,
 				7A5AB95323DA12DF00A3BA22 /* AppDelegate.swift */,
-				7A5AB95523DA12DF00A3BA22 /* ViewController.swift */,
 				7A5AB95723DA12DF00A3BA22 /* Main.storyboard */,
 				7A5AB95A23DA12FF00A3BA22 /* Assets.xcassets */,
 				7A5AB95C23DA12FF00A3BA22 /* LaunchScreen.storyboard */,
 				7A5AB95F23DA12FF00A3BA22 /* Info.plist */,
 				4CCD5F0123DA9D9B00C02451 /* movies.json */,
-				4CCD5F0C23DAED8800C02451 /* RatePopupController.swift */,
 			);
 			path = "Rate Movies";
 			sourceTree = "<group>";

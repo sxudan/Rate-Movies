@@ -32,7 +32,7 @@ class ViewController: UIViewController,MovielistDelegate,RatePopupDelegate {
         do{
             let tmpdata = try http.fetchMovies()
             order(data: tmpdata)
-            
+            moviesTable.reloadData()
             
         } catch MyHttpError.InvalidJson{
             print("Invalid Json")
@@ -52,7 +52,7 @@ class ViewController: UIViewController,MovielistDelegate,RatePopupDelegate {
     
     @IBAction func onRandomize(_ sender: Any) {
         if(randomBtnClicked){
-            randomBtn.setTitleColor(.systemBlue, for: .normal)
+            randomBtn.setTitleColor(.blue, for: .normal)
             randomBtnClicked = false
         }else{
             randomBtn.setTitleColor(.red, for: .normal)

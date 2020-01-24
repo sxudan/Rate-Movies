@@ -19,12 +19,14 @@ class MovielistCell: UITableViewCell {
     @IBOutlet weak var rateLabel: UILabel!
     var index:Int!
     
+    @IBOutlet weak var rateBtn: UIButton!
     
     var delegate:MovielistDelegate!
     
     
     func setPoster(assetName: String){
         moviePoster.image = UIImage(named: assetName)
+        moviePoster.tintColor = .yellow
     }
     
     func setTitle(title: String){
@@ -51,6 +53,9 @@ class MovielistCell: UITableViewCell {
         setTitle(title : data.title)
         setGenre(genres : data.genre)
         setRateLabel(rating: String(data.rating))
+        
+        rateBtn.layer.cornerRadius = rateBtn.frame.height/2.0
+        rateBtn.clipsToBounds = true
     }
     
 }
