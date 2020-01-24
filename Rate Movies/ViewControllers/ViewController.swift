@@ -28,6 +28,7 @@ class ViewController: UIViewController,MovielistDelegate,RatePopupDelegate {
         moviesTable.delaysContentTouches = false
     }
 
+    // creates a table view
     func initializeData(){
         do{
             let tmpdata = try http.fetchMovies()
@@ -41,6 +42,8 @@ class ViewController: UIViewController,MovielistDelegate,RatePopupDelegate {
         }
     }
     
+    
+    //on rate button clicked
     func onClick(index: Int) {
         let ratecontroller = self.storyboard?.instantiateViewController(withIdentifier: "ratepopup") as! RatePopupController
         ratecontroller.index = index
@@ -49,7 +52,7 @@ class ViewController: UIViewController,MovielistDelegate,RatePopupDelegate {
         self.present(ratecontroller, animated: true, completion: nil)
     }
     
-    
+    // on random rating button clicked
     @IBAction func onRandomize(_ sender: Any) {
         if(randomBtnClicked){
             randomBtn.setTitleColor(.blue, for: .normal)
@@ -62,7 +65,7 @@ class ViewController: UIViewController,MovielistDelegate,RatePopupDelegate {
         
     }
     
-    
+    // function to rate randomly called by button
     func startRatingRandomly(){
         showAlert(title: "Alert!", message: "Rating is started randomly at random time")
         queue = DispatchQueue(label: "work-queue")
@@ -82,17 +85,21 @@ class ViewController: UIViewController,MovielistDelegate,RatePopupDelegate {
         }
     }
     
+    // alert dialog function
     func showAlert(title: String, message: String){
         let alert = DialogBuilder(title: title, message: message).getAlert()
         self.present(alert, animated: true, completion: nil)
     }
     
+    // callback called by dialog box
     func onRated(index: Int, rating: Int) {
         movies![index].rating = rating
         order(data: movies!)
         showAlert(title: "Success", message: "You have successfully rated the movie!")
     }
     
+    
+    // sorting function
     func order(data: [Movie]){
         var ratings =  [Int : Int]()
         for (index,x) in data.enumerated(){
